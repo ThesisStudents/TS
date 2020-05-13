@@ -69,7 +69,8 @@ pipe = Pipeline(steps=[('preprocessor', preprocessor)
 
 ## Multiclass Labels
 cond_m1_1 = (df['ALERT_STATUS'] == 'Unsuspicious Alert') | \
-            (df['ALERT_STATUS'] == 'Unsuspicious Case')
+            (df['ALERT_STATUS'] == 'Unsuspicious Case') | \
+            (df['ALERT_STATUS'] == 'Approve Unsuspicious')
               
 cond_m1_2 = (df['ALERT_STATUS'] == 'Linked To Case')         
               
